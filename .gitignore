@@ -1,0 +1,13 @@
+*.os
+*.exp
+*.lib
+*.obj
+*.pdb
+*.idb
+*.DS_Store
+
+demo/.import
+demo/GalaxyPeer.log
+.sconsign.dblite
+gog-sdk/Include/*
+gog-sdk/Libraries/*

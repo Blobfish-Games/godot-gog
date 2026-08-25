@@ -1,0 +1,41 @@
+extends Node2D
+
+onready var gog = $"%GOG"
+
+var http_request: HTTPRequest
+var initialized := false
+var init_success: bool
+
+
+func _ready() -> void:
+	gog.connect("init_finished", self, "_on_init_finished")
+	
+	var client_id: String = "CLIENT_ID"
+	var client_secret: String = "CLIENT_SECRET"
+	gog.initialize(client_id, client_secret)
+
+
+func _on_init_finished(success: bool):
+	initialized = true
+	init_success = success
+
+
+func _on_Button_pressed():
+	if not initialized:
+		yield(gog, "init_finished")
+	if init_success:
+		print(gog.is_achievement_unlocked("ach_id"))
+
+
+func _on_Button2_pressed() -> void:
+	if not initialized:
+		yield(gog, "init_finished")
+	if init_success:
+		gog.unlock_achievement("ach_id")
+
+
+func _on_Button3_pressed():
+	if not initialized:
+		yield(gog, "init_finished")
+	if init_success:
+		gog.reset_stats_and_achievements()
