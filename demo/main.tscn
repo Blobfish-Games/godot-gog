@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://5swot1c5jeeg"]
+
+[ext_resource type="Script" uid="uid://dt2ofan62emnk" path="res://main.gd" id="3"]
+
+[node name="Main" type="HBoxContainer" unique_id=152437773]
+script = ExtResource("3")
+
+[node name="GOG" type="GOG" parent="." unique_id=1102302993]
+
+[node name="Button" type="Button" parent="." unique_id=216743511]
+layout_mode = 2
+text = "get ach"
+
+[node name="Button2" type="Button" parent="." unique_id=1295962827]
+layout_mode = 2
+text = "unlock ach"
+
+[node name="Button3" type="Button" parent="." unique_id=1130258152]
+layout_mode = 2
+text = "reset ach"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]

@@ -1,0 +1,12 @@
+*.os
+*.exp
+*.lib
+*.obj
+*.DS_Store
+
+demo/GalaxyPeer.log
+.sconsign.dblite
+bin/*
+gog-sdk/Include/*
+gog-sdk/Libraries/*
+~*.dll

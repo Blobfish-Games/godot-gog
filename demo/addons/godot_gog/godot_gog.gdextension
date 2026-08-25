@@ -1,0 +1,18 @@
+[configuration]
+entry_symbol = "godot_gog_init"
+compatibility_minimum = "4.5"
+reloadable = true
+
+[libraries]
+windows.debug.x86_64 = "res://addons/godot_gog/windows/godot_gog.windows.template_debug.x86_64.dll"
+windows.release.x86_64 = "res://addons/godot_gog/windows/godot_gog.windows.template_release.x86_64.dll"
+linux.debug.x86_64 = "res://addons/godot_gog/linux/libgodot_gog.linux.template_debug.x86_64.so"
+linux.release.x86_64 = "res://addons/godot_gog/linux/libgodot_gog.linux.template_release.x86_64.so"
+macos.debug = "res://addons/godot_gog/macos/libgodot_gog.macos.template_debug.dylib"
+macos.release = "res://addons/godot_gog/macos/libgodot_gog.macos.template_release.dylib"
+
+
+[dependencies]
+windows.x86_64 = { "res://addons/godot_gog/windows/Galaxy64.dll": "" }
+linux.x86_64 = { "res://addons/godot_gog/linux/libGalaxy64.so": "" }
+macos.universal = { "res://addons/godot_gog/macos/libGalaxy.dylib": "" }
