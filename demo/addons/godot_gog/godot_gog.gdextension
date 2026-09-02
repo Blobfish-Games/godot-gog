@@ -2,6 +2,8 @@
 entry_symbol = "godot_gog_init"
 compatibility_minimum = "4.5"
 reloadable = true
+include_tags = ["windows, macos"]
+
 
 [libraries]
 windows.debug.x86_64 = "res://addons/godot_gog/windows/godot_gog.windows.template_debug.x86_64.dll"
